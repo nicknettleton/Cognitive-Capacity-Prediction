@@ -11,7 +11,9 @@ Following success in the NIH/DrivenData [PREPARE Challenge Competition](https://
 
 The goal of this model is to predict individuals' future cognitive capacity based on [social determinants](https://www.who.int/health-topics/social-determinants-of-health), for early identification of Alzheimer's and Related Dementias. Early detection is crucial, yet current methods of screening are difficult to perform. Models that can flag individuals with a high risk early have the potential to enable early treatment.
 
-I find that we are able to predict cognitive capacity up to 20 years into the future with surprising accuracy based on social determinants alone. I also provide visualisations so people can compare their prediction to the population and understand how their prediction is made.
+I find that we are able to predict cognitive capacity up to 20 years into the future with surprising accuracy based on social determinants alone. I also provide visualisations so people can compare their prediction to the population and understand how their prediction is made: 
+
+![Example individual explainer report](assets/explainer-yeeg.png)
 
 ## Data
 
