@@ -1,7 +1,9 @@
 # Model Card: Predicting Future Cognitive Capacity
 
 Model version: v0.3
+
 Date the model card was created/updated: 14 April 2025
+
 Contact information for questions: Nick Nettleton, https://github.com/nicknettleton
 
 ## Model Description
