@@ -31,7 +31,9 @@ The model comprises:
 
 3. A SHAP (SHapley Additive exPlanations) TreeExplainer to explain and visualise on what basis predictions are made, at both population and individual prediction levels. This is intended to provide transparency into how the model works for both professional and lay users.
 
-For more details on the model, see the [Model Card](model_card.md)
+For more details on the model, see the [Model Card](model_card.md).
+
+To explore the code, see the Jupyter Notebook: [Cognitive-Capacity-Prediction.ipynb](Cognitive-Capacity-Prediction.ipynb).
 
 ## Hyperparameter Optimisation
 
