@@ -128,7 +128,7 @@ Prediction intervals are likely unnecessarily wide. I found that on the test set
 
 ![Prediction intervals](assets/prediction-intervals.png)
 
-The main protected charateristic in the data is gender. Although there are approximately 50% more females than males in the training data, prediction accuracy was relevatively consistent for both genders. This is a significant improvement over earlier versions of this model, where there was a disparity. This following box plot shows the relative consistency of prediction error between genders:
+The main protected charateristic in the data is gender. Although there are approximately 44% more females than males in the training data, prediction accuracy was relevatively consistent for both genders. This is a significant improvement over earlier versions of this model, where there was a disparity. This following box plot shows the relative consistency of prediction error between genders:
 
 ![Prediction error by gender](assets/gender.png)
 
