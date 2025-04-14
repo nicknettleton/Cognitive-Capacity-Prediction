@@ -118,7 +118,7 @@ It is not intended for use in clinical settings or individual clinical diagnosis
 
 Performance was measured on unseen data: a test set of 1062 samples, representing 20% of the total available data. To an ensure an unbiased measure of performance, the data was split carefully to ensure that individuals with multiple samples were grouped entirely in either the train set or the test set.
 
-Overall model performance was measured using RMSE. The final model achieved an RMSE of **38.6691** on the test set. This compares to the top ranking models in the DrivenData PREPARE Challenge based on the same data, which had RMSE between 38.2030 and 39.0283.
+Overall model performance was measured using RMSE. The final model achieved an RMSE of **38.6691** on the test set. This compares to the top ten ranking models in the DrivenData PREPARE Challenge based on the same data, which had RMSE between 38.2030 and 39.0283.
 
 The following chart shows the distribution of predicted versus ground truth scores. From this we see that it is most accurate towards the centre of the distribution, with a tendency to predict high for lower scorers, and low for high scorers. 
 
