@@ -1,4 +1,12 @@
-# Datasheet for Cognitive Capacity Prediction
+# Datasheet: Predicting Future Cognitive Capacity
+
+Datasheet version: v0.1
+
+Date the datasheet was created/updated: 14 April 2025
+
+Contact information for questions: Nick Nettleton, https://github.com/nicknettleton
+
+---
 
 The data for this model comes from the Mexican Health & Aging Study, https://www.mhasweb.org/, which has been running from 2001 to the present data.
 
@@ -55,7 +63,7 @@ The cognitive capacity label used, composite_score, is calculated from the under
     Constructional praxis	Physically copy a drawn figure	12
     Exective function	    Simple math question	        83
 
-Experiments have been carried out with discretization and processing missing values, but these are not used in the final model.
+Experiments have been carried out with discretization and processing missing values, but these are not used in the final model. Therefore, in the pipeline feeding the final model, categorical features and missing values present in the prepared MHAS data are handled directly by the model architecture.
  
 ## Uses
 
