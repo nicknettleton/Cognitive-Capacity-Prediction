@@ -4,13 +4,14 @@ Nick Nettleton, April 2025
 
 Licence: MIT
 
-## Summary
 
 Following success in the NIH/DrivenData [PREPARE Challenge Competition](https://www.drivendata.org/competitions/group/nih-nia-alzheimers-adrd-competition/), where I ranked second in the Model Arena and won an Explainability Prize, this project builds on that work.
 
-Its goal is to predict individuals' future cognitive capacity based on [social determinants](https://www.who.int/health-topics/social-determinants-of-health) to aid in early identification of Alzheimer's and Related Dementias (AD/ADRD).
+## Lay Summary
 
-This is important because early detection is crucial, yet current methods of screening are difficult to perform. Models that can flag individuals with high likelihood of cognitive decline early have the potential help catch and treat it earlier.
+The goal of this model is to predict individuals' future cognitive capacity based on [social determinants](https://www.who.int/health-topics/social-determinants-of-health), for early identification of Alzheimer's and Related Dementias. Early detection is crucial, yet current methods of screening are difficult to perform. Models that can flag individuals with a high risk early have the potential to enable early treatment.
+
+I find that we are able to predict cognitive capacity up to 20 years into the future with surprising accuracy based on social determinants alone. I also provide visualisations so people can compare their prediction to the population and understand how their prediction is made.
 
 ## Data
 
@@ -18,7 +19,7 @@ The data used comes from the [Mexican Health and Aging Study](https://www.mhaswe
 
 The MHAS (Mexican Health and Aging Study) is partly sponsored by the National Institutes of Health/National Institute on Aging (grant number NIH R01AG018016) in the United States and the Instituto Nacional de Estadística y Geografía (INEGI) in Mexico. The MHAS Cognitive Aging Ancillary Study Waves 1 and 2 (Mex-Cog 2016 and 2021) were sponsored by the National Institutes of Health/National Institute on Aging (NIH R01AG051158/ R56AG059756).
 
-Further details on the data are given in the [Data Sheet](data_sheet.md).
+Further details and links to download the data are given in the [Data Sheet](data_sheet.md).
 
 ## Model 
 
