@@ -38,6 +38,20 @@ All individuals in the model data used completed at least one survey and one cog
 
 The data is anonymised for research purposes, but nevertheless includes confidential health data.
 
+## Bias
+
+The underlying study was designed to be reflective of the Mexican population for people aged 50+.
+
+However, in the data used for this model, there are some individuals aged below 50, and by the nature of the population distribution, many less in the data aged over 70 and over 80.
+
+Cognitivity capacity, which is measured by composite_score, is distributed near-normally with a mean of 159. The lowest possible is 0, and the highest possible is 384, where higher is better. This distribution means that there are far fewer samples for those with very low and very high scores than those around the mean, which impacts our ability to make accurate preditions for those individuals. This makes it challenging to accurately identify those with the highest risk early based on social determinants alone - something which may need addressing for models that need to deliver high sensitivity or balanced performance, for example.
+
+Although the study was designed to be reflective of the Mexican population, in the data I have used there are roughly 44% more samples for females than males, which introduces a risk of unfair analysis based on gender. 
+
+The notebook includes a more detailed analysis of these and other key protected characteristics and social determinants.
+
+This data does not include information about ethnicity or sexual orientation, which would be helpful to identify any potential bias in these important protected characteristics.
+
 ## Collection process
 
 The data used for the model was collected in study waves between 2001 and 2021 through interviews and assessments directly with individuals and next of kin.
@@ -73,7 +87,7 @@ The underlying MHAS data used is a rich resource for study of health, social det
 
 From an AI perspective, it could be used in many ways to explore complex, evolving patterns of health, social determinants and aging, and potentially to forecast future trends too. Through the harmonized data shared by the Gateway to Global Aging Data project, data might be aggregated globally to build a richer and more comprehensive dataset for prediction and also to compare health based on geographical and societal factors.
 
-From an ethical perspective, part of the purpose of social determinants data is to understand the interplay of societal factors and health equity, and improve health equity for those who need it most. This topic is covered in depth by the WHO at https://www.who.int/health-topics/social-determinants-of-health. However, all data contains bias. For example, in the data subset I have used for this model, there are roughly 44% more samples for females than males, which introduces a risk of unfair analysis based on gender. Meanwhile, due normal distribution of cognitive capacity, there are far fewer samples for those with very low and very high scores than those around the mean, which impacts our ability to make accurate preditions for those individuals. This makes it challenging to accurately identify those with the highest risk early based on social determinants alone.
+From an ethical perspective, part of the purpose of social determinants data is to understand the interplay of societal factors and health equity, and improve health equity for those who need it most. This topic is covered in depth by the WHO at https://www.who.int/health-topics/social-determinants-of-health. However, all data contains bias. I have detailed above some key areas of bias that I have identified in the data, which need to be borne in mind when using it.
 
 It is important to note that this is not a clinical dataset. It does not factor in medical data. It is perfectly possible to have social determinants predictive of a certain cognitive capacity, while actually having something very different. Intuitively, this makes sense, and is in fact a desirable objective: in an ideal world, non-medical factors would have little to no influence on our health.
 

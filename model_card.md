@@ -128,19 +128,25 @@ Prediction intervals are likely unnecessarily wide. I found that on the test set
 
 ![Prediction intervals](assets/prediction-intervals.png)
 
-The main protected charateristic in the data is gender. Although there are approximately 44% more females than males in the training data, prediction accuracy was relevatively consistent for both genders. This is a significant improvement over earlier versions of this model, where there was a disparity. This following box plot shows the relative consistency of prediction error between genders:
-
-![Prediction error by gender](assets/gender.png)
-
 ## Limitations
 
-Key model limitations:
+Bias
 
-1. Due to imbalance in the data, predictions for low-scorers are significantly less accurate than for the population as a whole. For example, for those with scores over one standard deviation below the mean, RMSE is 55.2136. In experiments I have found that this can be improved by training a targeted low-scorer model, but with the comprise of less accurate predictions for the population as a whole.
+1. Due to imbalance in the data, predictions for low-scorers are significantly less accurate than for the population as a whole. For example, for those with true scores in the lowest quartile, RMSE was 49.91 on the test set, compared to 38.67 overall. In experiments I have found that this can be improved by training a targeted low-scorer model, but with the comprise of less accurate predictions for the population as a whole.
 
-2. The model is currently configured to predict cognitive capacity in 2016 and 2021 based on 2001, 2003 and 2012 survey data. It would be valuable to build on this by experimenting with a model that can be generalised to predict for any window of 5-20 years into the future based on data collected at any point.
+![Bias by score](assets/bias-by-score.png)
 
-3. The model is currently trained on the MHAS data, which exclusively covers the Mexican population. It is unknown how effectively this might generalise to other populations. It would be valuable to explore the global perspective.
+2. Prediction is slightly more accurate for males than females, with subpopulation RMSEs of 37.91 to 39.24 respectively. This is surprising given that there are 44% more samples for females in the underlying data and warrants further investigation.
+
+3. Another protected characteristic in the data is familial status, represented by marital status and number of living children. There are disparities in prediction accuracy based on marital status, with predictions for people separated or divorced in 2001 (for example) being much more accurate than for the overall population (RMSE 33.21), and those for people already Widowed in 2001 being much less accurate (RMSE 46.27). This warrants further investigation to understand the factors at play. As for children, the model is most accurate for those with 5 or 6 living children (RMSE 35.03) and least accurate for those with 3 or 4 (RMSE 40.63), but consistent otherwise.
+
+4. Looking at social determinants, the model is particularly accurate at predicting future composite scores for no education or just 1-5 years of education (RMSE 34.06 and 35.88). It is also better at predicting for rural dwellers (RMSE 35.80) compared to urban dwellers (RMSE 40.13) despite the fact that there are approximately 30% more urban dwellers in the training data.
+
+Other key limitations
+
+1. The model is currently configured to predict cognitive capacity in 2016 and 2021 based on 2001, 2003 and 2012 survey data. It would be valuable to build on this by experimenting with a model that can be generalised to predict for any window of 5-20 years into the future based on data collected at any point.
+
+2. The model is currently trained on the MHAS data, which exclusively covers the Mexican population and focuses primarily on individuals aged 50+. It is unknown how effectively this might generalise to other populations. It would be valuable to explore the global perspective.
 
 ## Trade-offs
 
