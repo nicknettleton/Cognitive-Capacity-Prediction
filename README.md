@@ -61,6 +61,8 @@ RMSE is used as the primary metric. Evaluated on a test set of unseen data, the 
 
 Prediction intervals were also appropriate, but potentially too wide: 94.73% of predictions were within the 90% prediction interval, and 81.07% within the 60% prediction interval.
 
+I give more detailed results, together with an analysis of prediction bias, in the [Model Card](model_card.md).
+
 ## Learnings
 
 The degree of accuracy with which we can predict future cognitive capacity based on social determinants is surprising - and potentially concerning. In an ideal world, cognitive capacity would depend on medical factors alone, rather than social ones.
