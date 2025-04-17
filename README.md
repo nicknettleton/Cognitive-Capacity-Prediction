@@ -45,7 +45,7 @@ The below chart shows the performance (measured in RMSE) for each candidate esti
 
 Some of these estimators, and in particular the gradient boosters, have many parameters that can be tuned. With each cross-validation run taking approximately 1-10 minutes depending on the estimator, it would not be practical to do this using grid search or random search.
 
-I used Optuna to implement Baysian Optimisation for this process, rather than write the code by hand, because it provide access to a range of advanced functionality together with flexibility. I implemented Constrained Hyperparameter Optimisation, so that appropriate combinations of values are suggested for each experiment where there are dependencies between them, and I implemented a process for saving the trial history for each estimator so that new tuning does not need to start from scratch.
+I used Optuna to implement Baysian Optimisation for this process, because it is fast, flexible, and offer a range of advanced functionality. Definining functions for initialising and suggesting new points for each estimator, I made use of constrained hyperparameter optimistion so that appropriate combinations of values are suggested for each experiment where there are dependencies between them. I implemented a process for saving and loading trial history for each estimator so tuning can be warm-started rather than start afresh for each new training run.
 
 The final performance of each candidate estimator in cross-validation post-tuning is shown in the chart below, with best to worst from left to right:
 
